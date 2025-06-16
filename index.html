@@ -1,371 +1,557 @@
 <!DOCTYPE html>
-<html  >
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1243155826763791');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1243155826763791&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+<html lang="pt-BR">
 <head>
-  <!-- Site made with Mobirise Website Builder v6.0.1, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v6.0.1, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/mbr-208x139.jpg" type="image/x-icon">
-  <meta name="description" content="Muitos educadores buscam formas autênticas e profundas de discutir racismo, identidade e justiça social. Encontrar materiais que realmente conectem com os alunos e promovam um diálogo construtivo pode ser um grande desafio.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Sampaio - Ebooks para Professores</title>
+    <!-- Inclui o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Ícones de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Define a fonte Inter como padrão para todo o corpo, e Lora para títulos */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Fundo suave neutro */
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        /* Custom scrollbar para navegadores Webkit (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 
-E se você tivesse em mãos uma ferramenta simples, poderosa e culturalmente rica para iniciar essas conversas essenciais?">
-  
-  
-  <title>A negra que não podia ser anjo</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=WtwV90"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=WtwV90" type="text/css">
+        /* Cores personalizadas: #71cde1 (Principal) e #f9c847 (Secundária) */
+        /* Principal: #71cde1 */
+        .text-custom-primary { color: #71cde1; }
+        .bg-custom-primary { background-color: #71cde1; }
+        .border-custom-primary { border-color: #71cde1; }
+        .hover\:bg-custom-primary-dark { background-color: #5ab9cf; } /* Um pouco mais escuro */
+        .hover\:text-custom-primary-dark { color: #5ab9cf; } /* Um pouco mais escuro */
+        
+        /* Secundária: #f9c847 */
+        .text-custom-secondary { color: #f9c847; }
+        .bg-custom-secondary { background-color: #f9c847; }
+        .border-custom-secondary { border-color: #f9c847; }
+        .hover\:bg-custom-secondary-dark { background-color: #e0b43f; } /* Um pouco mais escuro */
+        .hover\:text-custom-secondary-dark { color: #e0b43f; } /* Um pouco mais escuro */
 
-  
-  
-  
+        /* Tons muito claros para fundos e bordas */
+        .from-primary-light { background-image: linear-gradient(to right, #eaf8fc, #dcf1f6); }
+        .bg-primary-lighter { background-color: #f0fafd; }
+        .border-primary-light { border-color: #a3e2ee; }
+
+        .from-secondary-light { background-image: linear-gradient(to right, #fffbe0, #fff5cc); } /* Amarelo muito claro para gradiente */
+        .bg-secondary-lighter { background-color: #fffcee; } /* Amarelo muito claro para seções claras */
+        .border-secondary-light { border-color: #ffe09e; } /* Amarelo claro para bordas */
+
+        /* Estilos iniciais para animação (escondido) */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        /* Estilo quando a seção está visível */
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-  
-  <section data-bs-version="5.1" class="menu menu2 cid-uIy96lz5l2" once="menu" id="menu-5-uIy96lz5l2">
-	
+<body class="antialiased">
 
-	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-		<div class="container">
-			<div class="navbar-brand">
-				<span class="navbar-logo">
-					<a href="index.html#top">
-						<img src="assets/images/mbr-208x139.jpg" alt="Mobirise Website Builder" style="height: 5rem;">
-					</a>
-				</span>
-				
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				
-				
-				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="index.html#header13-m" target="_blank">SUPER OFERTA - COLEÇÃO TESOURO POÉTICO DOS PROFESSORES CONSCIENTES</a></div>
-			</div>
-		</div>
-	</nav>
-</section>
+    <!-- Cabeçalho (Header) -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-10 rounded-b-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo/Título do Site -->
+            <a href="index.html" class="text-2xl font-bold text-custom-primary hover:text-custom-primary-dark transition duration-300 ease-in-out">
+                Leonardo Sampaio
+            </a>
 
-<section data-bs-version="5.1" class="header13 cid-uNi3HMn65y" id="header13-g">
-  
+            <!-- Navegação (Menu Principal) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#credenciais" class="text-gray-700 hover:text-custom-primary font-semibold transition duration-300 ease-in-out">Sobre</a>
+                <a href="contato.html" class="text-gray-700 hover:text-custom-primary font-semibold transition duration-300 ease-in-out">Contato</a>
+                <a href="#" class="text-gray-700 hover:text-custom-primary font-semibold transition duration-300 ease-in-out">Blog</a>
+                <a href="index.html#credenciais" class="text-gray-700 hover:text-custom-primary font-semibold transition duration-300 ease-in-out">Autor</a>
+            </nav>
 
-  
-  
+            <!-- Botão de menu para mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
 
-  <div class="align-center container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-12 mb-5 content-head">
-        <h1 class="mbr-section-title mbr-fonts-style display-1"><strong>ENSINE SOBRE RACISMO COM ARTE E CORAGEM!</strong></h1>
-        <p class="mbr-text mbr-fonts-style mt-4 display-7">
-          Um cordel impactante + proposta pedagógica + roteiro teatral prontos para transformar sua aula em um espaço de consciência, escuta e protagonismo.
-        </p>
-        <div class="mbr-section-btn mt-4"><a class="btn btn-primary display-7" href="index.html#features026-j" target="_blank">SIM, QUERO ESTE MATERIAL!</a></div>
-      </div>
-    </div>
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-lg shadow-md">
+            <nav class="flex flex-col space-y-2 p-4">
+                <a href="index.html#credenciais" class="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-300 ease-in-out">Sobre</a>
+                <a href="contato.html" class="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-300 ease-in-out">Contato</a>
+                <a href="#" class="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-300 ease-in-out">Blog</a>
+                <a href="index.html#credenciais" class="block text-gray-700 hover:bg-gray-100 px-4 py-2 rounded-md transition duration-300 ease-in-out">Autor</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
-        <img src="assets/images/a-negra-que-no-podia-ser-anjo..png-1080x1080.png" alt="Mobirise Website Builder" title="">
-      </div>
-    </div>
-  </div>
-</section>
+    <main class="py-10">
 
-<section data-bs-version="5.1" class="header13 cid-uLjQ1yfWR9" id="header13-4">
-  
-
-  
-  
-
-  <div class="align-center container">
-    <div class="row justify-content-center">
-      <div class="col-md-12 mb-5 content-head">
-        <h1 class="mbr-section-title mbr-fonts-style display-1"><strong>Você sente o desafio de abordar temas sensíveis em sala de aula?</strong></h1>
-        <p class="mbr-text mbr-fonts-style mt-4 display-7">Esse conteúdo une literatura, performance e pedagogia crítica para te entregar um caminho seguro e sensível para lidar com o tema.<br>Com esse material, você não estará apenas ensinando — estará educando com propósito, provocando empatia e formando consciência social.<br></p>
-        <div class="mbr-section-btn mt-4"><a class="btn btn-primary display-7" href="index.html#features026-j" target="_blank">QUERO FAZER PARTE DISSO!</a></div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-7">
-        <img src="assets/images/vai-1080-x-1200-px-1.png-1080x1200.png" alt="Mobirise Website Builder" title="">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section data-bs-version="5.1" class="article07 cid-uLk5FAHDcV" id="article07-8">
-  
-
-  
-  
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="card col-md-12 col-lg-10">
-        <div class="card-wrapper">
-          <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2"><strong>Sobre: O cordel 'A Negra que não podia ser Anjo'</strong></h3>
-          <div class="row card-box align-left">
-            <div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7">
-                  Escrito pelo renomado poeta e educador Leonardo Sampaio, este cordel não é apenas uma história, mas um convite à reflexão e à ação. Com linguagem acessível e emocionante, 'A Negra que não podia ser Anjo' narra uma experiência impactante que aborda de frente as complexidades do racismo e da busca por identidade.
+        <!-- Seção: Headline Atraente (Hero) -->
+        <section id="headline" class="container mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-center from-secondary-light bg-gradient-to-r rounded-2xl shadow-lg p-8 md:p-12 mb-16 animate-on-scroll">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-custom-primary-dark leading-tight mb-4">
+                    Coleção Tesouro Poético dos Professores Conscientes
+                </h1>
+                <p class="text-lg text-gray-700 mb-6 max-w-lg mx-auto md:mx-0">
+                    Transforme a experiência em sala de aula através da poesia e da cultura popular! Desperte nos alunos pertencimento, criatividade e consciência social, com um material nascido da prática educativa real.
                 </p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7"><em>O erro comum de professores engajados é querer abordar temas como racismo e fé sem o suporte adequado.</em><br><br>- Usam textos genéricos que não conectam com a realidade dos alunos<br><br>- Têm medo de causar conflito por falta de embasamento pedagógico<br><br>- Evitam temas sensíveis por receio de críticas ou polêmicas<br><br>- Perdem oportunidades de gerar transformação por não ter um material acessível, poético e estruturado</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7"><em>O caminho certo é unir arte, pedagogia e posicionamento crítico com segurança.<br>Com esse material, você terá:</em><br><br>- Uma narrativa poética envolvente e poderosa<br><br>- Proposta pedagógica prática, com atividades e códigos da BNCC<br><br>- Um roteiro teatral completo para trabalhar protagonismo e expressão<br><br>- Tudo isso pensado para tornar a educação um ato de coragem, beleza e escuta ativa.</p>
-              </div>
-            </div><div class="item features-without-image col-12">
-              <div class="item-wrapper">
-                
-                <p class="mbr-text mbr-fonts-style display-7"><em><strong>A força está na estrutura tripla</strong></em>:<br><br><strong>O Cordel:</strong> história poética real que denuncia o racismo religioso com emoção e força simbólica<br><br><strong>A Proposta Pedagógica:</strong> com atividades guiadas, perguntas de reflexão, exercícios de escrita e performance<br><br><strong>O Roteiro Teatral:</strong> pronto para ser encenado com alunos, com sugestões de figurino, cenas e trilha sonora<br><br>Você só precisa baixar, ler e aplicar. É simples, transformador e já testado por centenas de professores.</p>
-              </div>
+                <a href="#oferta" class="inline-block bg-custom-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out transform hover:scale-105">
+                    SIM, QUERO ESTE PODEROSO MATERIAL PEDAGÓGICO!
+                </a>
             </div>
-            
-            
-            
-          </div>
-          <div class="mbr-section-btn"><a class="btn btn-success display-7" href="index.html#features026-j" target="_blank">QUERO AGORA!</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <!-- Imagem da Coleção ou Capa de Ebook principal -->
+                <img src="https://placehold.co/450x300/fff5cc/000000?text=Colecao+Tesouro+Poetico" alt="Coleção Tesouro Poético dos Professores Conscientes" class="max-w-xs md:max-w-md w-full h-auto rounded-xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out">
+            </div>
+        </section>
 
-<section data-bs-version="5.1" class="article12 cid-uLjThGOaZf" id="article12-6">    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2"><strong>Benefícios Imediatos para VOCÊ e SEUS ALUNOS:</strong></h3>
-                
-                <p class="mbr-text mbr-fonts-style display-7"><em>O educador ou a educadora que usa esse material:</em><br><br>◉ É admirada pela coragem de trazer temas urgentes para a sala de aula<br><br>◉ Promove rodas de leitura, apresentações e debates significativos<br><br>◉ É referência na escola por transformar conteúdos em vivência<br><br>◉ Sente orgulho por ensinar com sensibilidade, não só com conteúdo<br><br>◉ Facilita o diálogo sobre temas cruciais como racismo e preconceito.<br>
-<br>◉ Promove a empatia e a compreensão mútua.<br>
-<br>◉ Material culturalmente rico, valorizando a literatura de cordel.<br>
-<br>◉ Linguagem acessível que engaja jovens e adultos.<br>
-<br>◉ Inspira a reflexão crítica e o protagonismo estudantil.<br></p>
+        <!-- Seção: Identifique o Problema -->
+        <section id="problema" class="container mx-auto px-6 md:px-10 py-12 mb-16 text-center animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Educar com arte!
+            </h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+                Muitos educadores tentam inovar usando materiais genéricos, desconectados da realidade dos alunos. Projetos rasos, datas comemorativas sem significado real, atividades frias que não despertam emoção. O ensino se torna mais uma obrigatoriedade sem alma.
+            </p>
+            <div class="flex justify-center mt-8">
+                <!-- Ícone ou ilustração relacionada ao problema -->
+                <i class="fas fa-frown text-6xl text-custom-secondary"></i>
+            </div>
+        </section>
+
+        <!-- Seção: Forneça a Solução -->
+        <section id="solucao" class="container mx-auto px-6 md:px-10 py-12 mb-16 bg-secondary-lighter rounded-2xl shadow-lg animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+                O que funciona é levar para a sala de aula textos vivos, que dialogam com a cultura, a identidade e as emoções dos estudantes.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item da Solução 1 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-custom-primary text-5xl mb-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Textos Vivos da Prática</h3>
+                    <p class="text-gray-600">Poemas, cordéis e trovas escritos por um educador, que já foram usados por colegas em datas comemorativas, rodas de leitura, feiras culturais e momentos pedagógicos cheios de significado.</p>
+                </div>
+                <!-- Item da Solução 2 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-custom-primary text-5xl mb-4">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Criação Dentro da Escola</h3>
+                    <p class="text-gray-600">A coleção Tesouro Poético dos Professores Conscientes contém poesias, cordéis e trovas desenvolvidos a partir da experiência do autor em sala de aula. Cada poema foi escrito como resposta a uma necessidade real do cotidiano escolar.</p>
+                </div>
+                <!-- Item da Solução 3 -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="text-custom-primary text-5xl mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Educadores Transformadores</h3>
+                    <p class="text-gray-600">Professores que usam arte em suas aulas não são apenas transmissores de conhecimento: são criadores de experiências que os alunos levam para a vida inteira. São reconhecidos, celebrados e lembrados.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#oferta" class="inline-block bg-custom-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out transform hover:scale-105">
+                    QUERO FAZER PARTE DISSO!
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção: Apresente as suas CREDENCIAIS -->
+        <section id="credenciais" class="container mx-auto px-6 md:px-10 py-12 mb-16 text-center bg-secondary-lighter rounded-2xl shadow-lg animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Conheça <span class="text-custom-primary">Leonardo Sampaio</span>
+            </h2>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:text-left">
+                <!-- Imagem do autor Leonardo Sampaio, agora com o link real -->
+                <img src="https://leonardosampaio.com.br/assets/images/whatsapp-image-2024-10-14-at-21.20.02.jpeg-867x1156.jpg" alt="Foto de Leonardo Sampaio no Sítio Gangorra" class="w-48 h-auto rounded-lg mx-auto md:mx-0 mb-6 md:mb-0 md:mr-8 object-cover border-4 border-secondary-light shadow-lg">
+                <div class="text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        Leonardo Sampaio é um verdadeiro artesão da palavra e da educação, um poeta-pedagogo que transforma salas de aula em palcos e livros em atos de resistência cultural. Natural de Abaiara, no coração do Cariri cearense, cresceu imerso em um caldeirão cultural onde aboios, cordéis e ritmos populares moldaram seu olhar crítico e apaixonado pelo mundo.
+                    </p>
+                    <p class="mb-4">
+                        Formado em Pedagogia e com uma especialização focada em comunidades quilombolas e negras, Leonardo é um educador que caminha de mãos dadas com Paulo Freire e dança ao som dos tambores da ancestralidade. É também membro fundador da Academia Afrocearense de Letras (AAFROCEL).
+                    </p>
+                    <p>
+                        Com mais de uma década no magistério, sua jornada une o formal e o popular, o lírico e o didático. Leonardo atua como professor da rede municipal de Fortaleza, mas não se engane: ele é muito mais do que um profissional de lousa e giz. Sua missão é fazer da educação uma experiência poética e transformadora, onde cada rima e verso abrem portas para um mundo mais inclusivo e consciente. Com Leonardo Sampaio, a palavra vira ação, o poema vira inspiração, e a sala de aula... bem, essa vira uma verdadeira festa de cordel e cidadania!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: O que você vai Conquistar com Nossos Ebooks (em formato de lista de tópicos) -->
+        <section id="beneficios" class="container mx-auto px-6 md:px-10 py-12 mb-16 bg-white rounded-2xl shadow-lg animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+                O que você vai <span class="text-custom-primary">Conquistar</span> com Nossos Ebooks
+            </h2>
+            <div class="max-w-3xl mx-auto text-left">
+                <ul class="space-y-6">
+                    <!-- Item de Conquista 1: Poemas Prontos para Uso -->
+                    <li class="flex items-start">
+                        <div class="text-custom-primary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Poemas Prontos para Uso</h3>
+                            <p class="text-gray-600">Poemas prontos para usar em datas comemorativas ou projetos escolares, sem precisar reinventar a roda.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 2: Várias Possibilidades -->
+                    <li class="flex items-start">
+                        <div class="text-custom-secondary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Várias Possibilidades</h3>
+                            <p class="text-gray-600">Um só livro, várias possibilidades de uso ao longo do ano letivo.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 3: Aplicação Imediata -->
+                    <li class="flex items-start">
+                        <div class="text-custom-primary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Aplicação Imediata</h3>
+                            <p class="text-gray-600">Pode ser aplicado ainda hoje em sala, sem preparação complexa.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 4: Reconhecimento -->
+                    <li class="flex items-start">
+                        <div class="text-custom-secondary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Reconhecimento</h3>
+                            <p class="text-gray-600">Educadores relatam que foram reconhecidos por projetos a partir desses textos.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 5: Mais Arte e Emoção -->
+                    <li class="flex items-start">
+                        <div class="text-custom-primary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Mais Arte e Emoção</h3>
+                            <p class="text-gray-600">Uma educação com mais arte, escuta e emoção — sem perder tempo.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 6: Materiais Relevantes -->
+                    <li class="flex items-start">
+                        <div class="text-custom-secondary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Materiais Relevantes</h3>
+                            <p class="text-gray-600">Chega de materiais genéricos que não conversam com a realidade da escola.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 7: Poesia que Encanta -->
+                    <li class="flex items-start">
+                        <div class="text-custom-primary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Poesia que Encanta</h3>
+                            <p class="text-gray-600">Enquanto muitos ainda buscam conteúdo, alguns já encantam com poesia.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 8: Estímulo ao Crítico -->
+                    <li class="flex items-start">
+                        <div class="text-custom-secondary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Estímulo ao Crítico</h3>
+                            <p class="text-gray-600">Poemas e cordéis que estimulam a leitura e o pensamento crítico.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 9: Inclusão e Cidadania -->
+                    <li class="flex items-start">
+                        <div class="text-custom-primary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Inclusão e Cidadania</h3>
+                            <p class="text-gray-600">Reflexões sobre inclusão, racismo, ancestralidade e cidadania.</p>
+                        </div>
+                    </li>
+                    <!-- Item de Conquista 10: Ilustrações por Crianças -->
+                    <li class="flex items-start">
+                        <div class="text-custom-secondary text-3xl mr-4 flex-shrink-0">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">Ilustrações por Crianças</h3>
+                            <p class="text-gray-600">Ilustrações feitas por crianças, que enriquecem a obra com um toque autêntico e criativo.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção: Dê Provas Sociais (Depoimentos) -->
+        <section id="depoimentos" class="bg-secondary-lighter py-16 mb-16 animate-on-scroll">
+            <div class="container mx-auto px-6 md:px-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+                    O que dizem os <span class="text-custom-primary">Professores</span> que já usaram
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <!-- ATENÇÃO: Substitua o URL da imagem do professor -->
+                        <img src="https://placehold.co/80x80/fff5cc/000000?text=Prof+1" alt="Foto de Professora" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-secondary-light">
+                        <p class="text-gray-700 italic mb-4">"Os materiais do Leonardo transformaram minhas aulas! Meus alunos estão muito mais engajados e conectados com o conteúdo."</p>
+                        <p class="font-semibold text-custom-primary">- Professora Maria, Ensino Fundamental</p>
+                    </div>
+                    <!-- Depoimento 2 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <!-- ATENÇÃO: Substitua o URL da imagem do professor -->
+                        <img src="https://placehold.co/80x80/fff5cc/000000?text=Prof+2" alt="Foto de Professor" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-secondary-light">
+                        <p class="text-gray-700 italic mb-4">"Finalmente um material que conversa com a realidade dos meus alunos. As poesias e cordéis são incríveis!"</p>
+                        <p class="font-semibold text-custom-primary">- Professor João, Ensino Médio</p>
+                    </div>
+                    <!-- Depoimento 3 -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <!-- ATENÇÃO: Substitua o URL da imagem do professor -->
+                        <img src="https://placehold.co/80x80/fff5cc/000000?text=Prof+3" alt="Foto de Professora" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-secondary-light">
+                        <p class="text-gray-700 italic mb-4">"Minhas aulas de arte ganharam uma nova dimensão com a coleção Tesouro Poético. Recomendo a todos os educadores!"</p>
+                        <p class="font-semibold text-custom-primary">- Professora Carla, Artes e Cultura</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Faça a sua OFERTA -->
+        <section id="oferta" class="container mx-auto px-6 md:px-10 py-12 mb-16 text-center bg-white rounded-2xl shadow-lg p-8 md:p-12 animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Esta Oferta Exclusiva Pode Terminar em Breve!
+            </h2>
+            <p class="text-xl text-custom-secondary font-bold mb-4">
+                De R$ 97,70 por apenas <span class="text-custom-secondary text-3xl">R$ 67,70!</span>
+            </p>
+            <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+                Garanta agora a Coleção Tesouro Poético dos Professores Conscientes e transforme suas aulas!
+            </p>
+            <div class="text-left max-w-md mx-auto mb-8">
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><span class="font-semibold">O Ebook Performance Poética na Escola:</span> Mais de 190 páginas de poesias criadas ao longo de anos de experiência em escolas públicas.</li>
+                    <li><span class="font-semibold">5 Cordéis Transformadores:</span> Pobre não pode ter voz, A negra que não podia ser anjo, Consequência do voto, Religiões do mundo, Lendas, racismo e brincadeiras africanas.</li>
+                    <li><span class="font-semibold">BÔNUS 1:</span> Uma proposta pedagógica com os códigos da BNCC para cada cordel.</li>
+                    <li><span class="font-semibold">BÔNUS 2:</span> Um roteiro teatral completo sobre o cordel “A negra que não podia ser anjo” para aplicar em sala ou evento.</li>
+                    <li><span class="font-semibold">BÔNUS 3:</span> Kit Poético Interdisciplinar - Língua Portuguesa, História e Artes em Cordel.</li>
+                    <li><span class="font-semibold">BÔNUS 4:</span> Caderno de Atividades para Estudantes.</li>
+                    <li><span class="font-semibold">BÔNUS 5:</span> Frases-Poema para Começar Aulas com Reflexão.</li>
+                </ul>
+            </div>
+            <a href="#" class="inline-block bg-custom-primary text-white font-bold py-4 px-12 rounded-full shadow-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out transform hover:scale-105 text-xl">
+                QUERO LER AGORA!
+            </a>
+            <p class="text-sm text-gray-500 mt-4">
+                📩 Entrega digital imediata. 💳 Garantia de 7 dias ou seu dinheiro de volta.
+            </p>
+        </section>
+
+        <!-- Seção: Como Funciona a Entrega -->
+        <section id="entrega" class="container mx-auto px-6 md:px-10 py-12 mb-16 text-center bg-white rounded-2xl shadow-lg p-8 animate-on-scroll">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                Como Funciona a <span class="text-custom-primary">Entrega</span>
+            </h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                Após a compra, o ebook é liberado para download imediato. Pode ser lido no celular, tablet, computador ou impresso e distribuído entre os alunos com facilidade.
+            </p>
+            <div class="flex justify-center mt-8 space-x-6 text-custom-primary text-5xl">
+                <i class="fas fa-mobile-alt"></i>
+                <i class="fas fa-tablet-alt"></i>
+                <i class="fas fa-laptop"></i>
+                <i class="fas fa-print"></i>
+            </div>
+        </section>
+
+        <!-- Seção: Documentário -->
+        <section id="documentario" class="container mx-auto px-6 md:px-10 py-12 mb-16 text-center animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Documentário: <span class="text-custom-primary">Performance Poética na Escola</span>
+            </h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+                Um documentário que mergulha na experiência única de educadores e alunos ao explorarem a poesia como ferramenta de ensino. Acompanhe como o livro de Leonardo Sampaio inspira salas de aula pelo Brasil, unindo cordéis, trovas e cultura popular para promover cidadania, inclusão e aprendizado criativo. Descubra histórias emocionantes de transformação e o poder da arte na construção de um ensino mais humano e libertador.
+            </p>
+            <div class="flex justify-center">
+                <!-- Vídeo do YouTube inserido aqui -->
+                <iframe class="w-full max-w-3xl h-64 md:h-96 rounded-xl shadow-2xl" src="https://www.youtube.com/embed/rMp6um_TeVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Seção: Outras Publicações (Cordéis) -->
+        <section id="publicacoes" class="container mx-auto px-6 md:px-10 py-12 mb-16 animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+                <span class="text-custom-primary">PUBLICAÇÕES</span> - Conheça outras obras
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Cordel - Consequência do voto -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x550/fff5cc/000000?text=Capa+Cordel+Voto" alt="Capa do Cordel Consequência do voto" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Consequência do voto</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">“A Consequencia do Voto” é um cordel forte, direto e necessário. Em versos rimados e cheios de crítica social, Leonardo Sampaio convida você a refletir sobre política, desigualdade e o futuro do nosso povo.</p>
+                        <a href="#" class="w-full inline-block bg-custom-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out shadow-md text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cordel - Lendas, racismo e brincadeiras africanas -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x550/fff5cc/000000?text=Capa+Cordel+Lendas" alt="Capa do Cordel Lendas, racismo e brincadeiras africanas" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Lendas, racismo e brincadeiras africanas</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">O cordel Lendas, Racismo e Brincadeiras Africanas, de Leonardo Sampaio, resgata memórias, lendas e brincadeiras infantis de origem africana.</p>
+                        <a href="#" class="w-full inline-block bg-custom-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out shadow-md text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cordel - A Negra que Não Podia Ser Anjo -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x550/fff5cc/000000?text=Capa+Cordel+Anjo" alt="Capa do Cordel A Negra que Não Podia Ser Anjo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">A Negra que Não Podia Ser Anjo</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">O cordel "A Negra que Não Podia Ser Anjo" traz versos impactantes sobre racismo, resistência e fé, revelando injustiças históricas e o poder da arte como transformação social.</p>
+                        <a href="#" class="w-full inline-block bg-custom-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out shadow-md text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cordel - Pobre não pode ter voz -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x550/fff5cc/000000?text=Capa+Cordel+Voz" alt="Capa do Cordel Pobre não pode ter voz" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pobre não pode ter voz</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Mergulhe em uma narrativa poética que expõe as injustiças sociais, exaltando a força da luta popular. Uma obra rica em cultura e reflexão, perfeita para quem valoriza a tradição e a resistência!</p>
+                        <a href="#" class="w-full inline-block bg-custom-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out shadow-md text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cordel - Crenças e religiões no mundo -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="https://placehold.co/400x550/fff5cc/000000?text=Capa+Cordel+Religioes" alt="Capa do Cordel Crenças e religiões no mundo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Crenças e religiões no mundo</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">O cordel tem potencial educativo, podendo ser utilizado em escolas, rodas de conversa e espaços inter-religiosos para promover o diálogo e o respeito às diferenças.</p>
+                        <a href="#" class="w-full inline-block bg-custom-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out shadow-md text-center">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#oferta" class="inline-block bg-custom-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-custom-primary-dark transition duration-300 ease-in-out transform hover:scale-105">
+                    EU QUERO!
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé (Footer) com Disclaimer -->
+    <footer id="contato" class="bg-gray-800 text-white py-10 px-6 md:px-10 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">
+                "Ler a vida, ler o mundo <br> É mesmo que viajar <br> Conhecer como ele é <br> É permitir enxergar <br> Ciência e a natureza <br> É conhecer outro lugar" <br> <span class="font-semibold">- Leonardo Sampaio</span>
+            </p>
+            <p class="mb-4">&copy; 2025 Leonardo Sampaio. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-400 hover:text-custom-primary transition duration-300 ease-in-out text-2xl">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-custom-primary transition duration-300 ease-in-out text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-custom-primary transition duration-300 ease-in-out text-2xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:contato@leonardosampaio.com.br" class="text-gray-400 hover:text-custom-primary transition duration-300 ease-in-out text-2xl">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 mb-4">Contato: contato@leonardosampaio.com.br</p>
+            <div class="text-gray-500 text-xs">
+                <!-- Disclaimer -->
+                <p>As informações contidas neste site e nos ebooks são para fins educacionais e não substituem o aconselhamento profissional.</p>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<section data-bs-version="5.1" class="features026 cid-uNnzhnKSXj" id="features026-j">
-	
+    <script>
+        // Lógica para o menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-	
-	
-	<div class="container">
-		<div class="row mb-5 justify-content-center">
-			<div class="col-12 mb-0 content-head">
-				<h3 class="mbr-section-title mbr-fonts-style align-center display-2"><strong>Esta oferta pode terminar em breve.</strong></h3>
-				<h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">📩 Entrega digital imediata.
-<div>💳 Garantia de 7 dias ou seu dinheiro de volta.</div></h5>
-			</div>
-		</div>
-		<div class="row">
-			<div class="item features-without-image col-12 col-md-6 col-lg-6 item-mb">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						
-						<h5 class="card-title mbr-fonts-style display-5"><strong>Opção Básica: Cordel Digital 'A Negra que não podia ser Anjo'</strong></h5>
-						<p class="price mbr-fonts-style display-7">R$ 9,90</p>
-						<p class="card-text mbr-fonts-style display-7">✓ Formato PDF de alta qualidade
-<br>
-<br>✓ Acesso imediato após a compra
-<br>
-<br>✓ Material pronto para usar e inspirar</p>
-						<div class="mbr-section-btn mt-auto"><a class="btn btn-lg btn-danger display-7" href="https://pay.kiwify.com.br/2beGBsh" target="_blank">QUERO LER AGORA!</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="item features-without-image col-12 col-md-6 col-lg-6 item-mb">
-				<div class="item-wrapper">
-					<div class="card-box align-left">
-						
-						<h5 class="card-title mbr-fonts-style display-5"><strong>VOCÊ QUER SÓ UM MATERIAL TRANSFORMADOR OU A COLEÇÃO COMPLETA PARA REVOLUCIONAR SUA PRÁTICA COM POESIA, CIDANIA E CONSCIÊNCIA?</strong></h5>
-						<p class="price mbr-fonts-style display-7">⬅️ Uma aula transformadora por R$ 9,90<br>OU<br>➡️ Um acervo completo para transformar o ano inteiro por R$ 57,70</p>
-						<p class="card-text mbr-fonts-style display-7"><strong>OFERTA ESPECIAL + BÔNUS!
-</strong><br>
-<br>📚 Livro completo + 5 cordéis + propostas pedagógicas + roteiro teatral<br>💳 Apenas R$ 57,70<br><br>✔️ Tudo que está incluso na opção anterior<br>✔️ + 4 cordéis extras com temas como racismo, cidadania, fé e cultura<br>✔️ + Livro Performance Poética na Escola<br>✔️ + Propostas pedagógicas com códigos da BNCC<br>✔️ Valor real: R$ 97,00 — Você paga só R$ 57,70<br>
-<br>💥 Oferta exclusiva apenas para as primeiras 200 compras!</p>
-						<div class="mbr-section-btn mt-auto"><a class="btn btn-lg btn-danger display-7" href="https://pay.kiwify.com.br/nVllGmm">Quero a Coleção Completa por R$ 57,70</a></div>
-					</div>
-				</div>
-			</div>
-			
-			
-		</div>
-	</div>
-</section>
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-<section data-bs-version="5.1" class="header13 cid-uNnAIZHA87" id="header13-m">
-  
+        // Fechar o menu mobile ao clicar em um link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-  
-  
+        // Lógica para animação ao rolar
+        // Seleciona todas as seções que terão animação
+        const sectionsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
-  <div class="align-center container">
-    <div class="row justify-content-center">
-      <div class="col-md-12 mb-5 content-head">
-        <h1 class="mbr-section-title mbr-fonts-style display-1">
-          <strong>COLEÇÃO TESOURO POÉTICO DOS PROFESSORES CONSCIENTES!</strong></h1>
-        <p class="mbr-text mbr-fonts-style mt-4 display-7">
-          Se esse material já te emocionou e inspirou, imagine ter acesso ao livro completo Performance Poética na Escola, mais 5 cordéis com propostas pedagógicas exclusivas. <br><br>Clique no botão abaixo e leve a Coleção completa com desconto especial por tempo limitado.
-        </p>
-        <div class="mbr-section-btn mt-4"><a class="btn btn-primary display-7" href="https://mobiri.se">SIM, QUERO ESTE PODEROSO MATERIAL PEDAGÓGICO!</a></div>
-      </div>
-    </div>
+        // Configura o Intersection Observer
+        const observerOptions = {
+            root: null, // O viewport é o root
+            rootMargin: '0px',
+            threshold: 0.1 // 10% da seção precisa estar visível para disparar
+        };
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
-        <img src="assets/images/7.png-1025x867.png" alt="Mobirise Website Builder" title="">
-      </div>
-    </div>
-  </div>
-</section>
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Se a seção está visível
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible'); // Adiciona a classe para ativar a animação
+                    observer.unobserve(entry.target); // Deixa de observar para que a animação só ocorra uma vez
+                }
+            });
+        }, observerOptions);
 
-<section data-bs-version="5.1" class="article12 cid-uLk70FY058" id="article12-9">    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2"><strong>COMO FUNCIONA A ENTREGA:</strong></h3>
-                
-                <p class="mbr-text mbr-fonts-style display-7">Após a compra, o ebook é liberado para download imediato. Pode ser lido no celular, tablet, computador ou impresso e distribuído entre os alunos com facilidade.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="article12 cid-uNnuZ6H6G9" id="article12-i">    
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2"><strong>Leonardo Sampaio - Boletim Poético</strong></h3>
-                
-                <p class="mbr-text mbr-fonts-style display-7">Comprou, ganhou passe direto para o Boletim Poético: versos inéditos de Leonardo no seu WhatsApp, só pros de casa.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="start article2 cid-uIynftSJR7" id="article02-2">
-	
-
-	
-	
-
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-12 col-lg-6 image-wrapper">
-				<img class="w-100" src="assets/images/imagem-do-whatsapp-de-2025-06-01-s-05.28.17-940def13.jpg-824x1224.jpg" alt="Mobirise Website Builder">
-			</div>
-			<div class="col-12 col-md-12 col-lg">
-				<div class="text-wrapper align-left">
-					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>Leonardo Sampaio</strong></h1>
-					<p class="mbr-text align-left mbr-fonts-style mb-4 display-7">Leonardo Sampaio é um verdadeiro artesão da palavra e da educação, um poeta-pedagogo que transforma salas de aula em palcos e livros em atos de resistência cultural. Natural de Abaiara, no coração do Cariri cearense, cresceu imerso em um caldeirão cultural onde aboios, cordéis e ritmos populares moldaram seu olhar crítico e apaixonado pelo mundo.
-<br>
-<br>Formado em Pedagogia e com uma especialização focada em comunidades quilombolas e negras, Leonardo é um educador que caminha de mãos dadas com Paulo Freire e dança ao som dos tambores da ancestralidade. É também membro fundador da Academia Afrocearense de Letras (AAFROCEL).
-<br>
-<br>Com mais de uma década no magistério, sua jornada une o formal e o popular, o lírico e o didático. Leonardo atua como professor da rede municipal de Fortaleza, mas não se engane: ele é muito mais do que um profissional de lousa e giz. Sua missão é fazer da educação uma experiência poética e transformadora, onde cada rima e verso abrem portas para um mundo mais inclusivo e consciente.
-<br>
-<br>Com Leonardo Sampaio, a palavra vira ação, o poema vira inspiração, e a sala de aula... bem, essa vira uma verdadeira festa de cordel e cidadania!</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="footer3 cid-uIy96lCVtJ" once="footers" id="footer-6-uIy96lCVtJ">
-
-<script>
-    let prefix = ["https://pay.kiwify.com.br"];
-
-function getParams() {
-    let t = "",
-        e = window.top.location.href,
-        r = new URL(e);
-    if (null != r) {
-        let a = r.searchParams.get("utm_source"),
-            n = r.searchParams.get("utm_medium"),
-            o = r.searchParams.get("utm_campaign"),
-            m = r.searchParams.get("utm_term"),
-            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
-    }
-    return t
-}! function() {
-    var t = new URLSearchParams(window.location.search);
-    t.toString() && document.querySelectorAll("a").forEach(function(e) {
-        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-    })
-}(); </script>
-
-
-    
-
-    <div class="container">
-        <div class="row">
-            <div class="row-links">
-                <ul class="header-menu">
-                  
-                  
-                  
-                  
-                <li class="header-menu-item mbr-fonts-style display-5">
-                    <a href="index.html#article07-8" class="text-white text-primary">Sobre</a>
-                  </li><li class="header-menu-item mbr-fonts-style display-5"><a href="index.html#header13-m" class="text-white text-primary" target="_blank">COLEÇÃO TESOURO POÉTICO DOS PROFESSORES CONSCIENTES</a></li><li class="header-menu-item mbr-fonts-style display-5"><a href="index.html#features026-j" class="text-white text-primary">A negra que não podia ser anjo</a></li><li class="header-menu-item mbr-fonts-style display-5"></li></ul>
-              </div>
-
-            
-            <div class="col-12 mt-4">
-                <p class="mbr-fonts-style copyright display-7">© 2025 Leonardo Sampaio. Todos os direitos reservados.<br>Uma iniciativa para levar mais poesia e transformação para a educação.<br></p>
-            </div>
-        </div>
-    </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="menterefinada.com.br" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/ai-website-generator.html"></a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
+        // Observa cada seção
+        sectionsToAnimate.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
